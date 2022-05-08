@@ -1,0 +1,131 @@
+/* ----------------------------------------------
+Variables
+---------------------------------------------- */
+:root{
+    --nav-color:#B10F2E;
+    --nav-font-color:#fff;
+    --nav-line-color:#fff;
+    --nav-hover-color:#fff;
+}
+
+/* ----------------------------------------------
+Fonts
+---------------------------------------------- */
+
+@font-face {
+    font-family: 'nav';
+    src: url('./Assets/Fonts/Satoshi-Medium.ttf');
+    font-weight:500;
+    font-style:medium;
+}
+
+/* ---------------------------------
+Formatting
+--------------------------------- */
+
+* ,  *::before , *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+/* ---------------------------------
+  Start of code
+--------------------------------- */
+
+
+.nav-item{
+    position: relative;
+    color: var(--nav-font-color);
+    font-family:'nav';  
+    transition: all 0.1s ease-in-out;
+}
+.nav-item:hover{
+    opacity:1;
+    color: var(--nav-hover-color);
+}
+
+.nav-item::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height:2px;
+    color:var(--nav-font-color);
+    border-radius:20px;
+    background-color:var(--nav-line-color);
+    left: 0;
+    bottom:-0.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-item:hover::after{
+    width:100%;
+    background-color: var(--nav-hover-color);
+}
+
+
+.nav{
+    width: 100%;
+    display:flex;
+    position:fixed;
+    background-color: var(--nav-color);
+    height:4rem;
+    padding:0 0 0 1rem;
+    
+}
+
+.navigation--{
+    width: 100%;
+    max-width: 650px;
+    display:flex;
+    padding-left:1rem;
+    margin-left:auto;
+    align-items:center;
+    justify-content: space-around;
+}
+
+
+
+.logo{
+    position:relative;
+    max-width:50px;
+    max-height:50px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.more{
+    background-color:#B10F2E;
+    padding:0.5rem;
+    border:1px solid #fff;
+    color:#fff;
+
+}
+ 
+.sub-menu{
+    display:none;
+}
+
+.extra_menu:hover,.sub-menu{
+    display:block;
+    position:absolute;
+    color:black;
+    margin-top:20px;
+}
+
+
+
+
+@media all and (max-width:725px){
+     /* using JS  */
+}
