@@ -2,10 +2,10 @@
 Variables
 ---------------------------------------------- */
 :root{
-    --nav-color:#B10F2E;
-    --nav-font-color:#fff;
-    --nav-line-color:#fff;
-    --nav-hover-color:#fff;
+  --nav-color:#B10F2E;
+  --nav-font-color:#fff;
+  --nav-line-color:#fff;
+  --nav-hover-color:#fff;
 }
 
 /* ----------------------------------------------
@@ -13,10 +13,10 @@ Fonts
 ---------------------------------------------- */
 
 @font-face {
-    font-family: 'nav';
-    src: url('./Assets/Fonts/Satoshi-Medium.ttf');
-    font-weight:500;
-    font-style:medium;
+  font-family: 'nav';
+  src: url('./Assets/Fonts/Satoshi-Medium.ttf');
+  font-weight:500;
+  font-style:medium;
 }
 
 /* ---------------------------------
@@ -24,209 +24,212 @@ Formatting
 --------------------------------- */
 
 * ,  *::before , *::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #EDF2F4;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #EDF2F4;
 }
 
 img{
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 
 li{
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /* ---------------------------------
-  Start of code
+Start of code
 --------------------------------- */
 
+.nav-item, .navigation--
+{
+background-color: var(--nav-color);
+}
 
 .nav-item{
-    position: relative;
-    color: var(--nav-font-color);
-    font-family:'nav';  
-    transition: all 0.1s ease-in-out;
+  position: relative;
+  color: var(--nav-font-color);
+  font-family:'nav';  
+  transition: all 0.1s ease-in-out;
 }
 .nav-item:hover{
-    opacity:1;
-    color: var(--nav-hover-color);
+  opacity:1;
+  color: var(--nav-hover-color);
 }
 
 .nav-item::after{
-    content: "";
-    position: absolute;
-    width: 0;
-    height:2px;
-    color:var(--nav-font-color);
-    border-radius:20px;
-    background-color:var(--nav-line-color);
-    left: 0;
-    bottom:-0.2rem;
-    transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height:2px;
+  color:var(--nav-font-color);
+  border-radius:20px;
+  background-color:var(--nav-line-color);
+  left: 0;
+  bottom:-0.2rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-item:hover::after{
-    width:100%;
-    background-color: var(--nav-hover-color);
+  width:100%;
+  background-color: var(--nav-hover-color);
 }
 
 
 .nav{
-    width: 100%;
-    display:flex;
-    position:fixed;
-    background-color: var(--nav-color);
-    height:4rem;
-    padding:0 0 0 1rem;
-    
+  width: 100%;
+  display:flex;
+  /* position:fixed; */
+  background-color: var(--nav-color);
+  height:4rem;
+  padding:1rem;
 }
 
 .navigation--{
-    width: 100%;
-    max-width: 650px;
-    display:flex;
-    padding-left:1rem;
-    margin-left:auto;
-    align-items:center;
-    justify-content: space-around;
+  width: 100%;
+  max-width: 650px;
+  display:flex;
+  padding-left:1rem;
+  margin-left:auto;
+  align-items:center;
+  justify-content: space-around;
 }
 
 
 
 .logo{
-    position:relative;
-    max-width:50px;
-    max-height:50px;
-    top:50%;
-    transform:translateY(-50%);
+  position:relative;
+  max-width:50px;
+  max-height:50px;
+  top:50%;
+  transform:translateY(-50%);
 }
 
 .more{
-    background-color:#B10F2E;
-    padding:0.5rem;
-    border:1px solid #fff;
-    color:#fff;
+  background-color:#B10F2E;
+  padding:0.5rem;
+  border:1px solid #fff;
+  color:#fff;
 
 }
- 
+
 .sub-menu{
-    display:none;
+  display:none;
 }
 
 .extra_menu:hover,.sub-menu{
-    display:block;
-    position:absolute;
-    color:black;
-    margin-top:20px;
+  display:block;
+  position:absolute;
+  color:black;
+  margin-top:20px;
 }
- 
+
 
 /* ----------------ABOUT PAGE-------------- */
 
 .about-header{
-    text-align: center;
-    line-height: 150px;
-    color: var(--nav-color);
-    font-family: 'nav';
+  text-align: center;
+  line-height: 150px;
+  color: var(--nav-color);
+  font-family: 'nav';
 
 }
 
 .about-body{
-    margin: 5px 150px 50px;
-    text-align: left;
-    font-weight: bold;
-    font-weight: 'nav';
+  margin: 5px 150px 50px;
+  text-align: left;
+  font-weight: bold;
+  font-weight: 'nav';
 }
 .about-column{
-    float: left;
-    width: 25%;
-    padding: 2px;
+  float: left;
+  width: 25%;
+  padding: 2px;
 }
 
 .about-row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .about-grid{
 justify-content: center;
 padding: 20px;
 
-  }
+}
 
 /* Style the Image Used to Trigger the Modal */
 #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  #myImg:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (Image) */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* @keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+} */
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
   .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 100%;
   }
-  
-  
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  /* @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  } */
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-  }
+}
 
 
 
@@ -234,5 +237,113 @@ padding: 20px;
 /* -------------END OF ABOUT PAGE----------------- */
 
 @media all and (max-width:725px){
-     /* using JS  */
+   /* using JS  */
 }
+
+
+/* Landing page */
+
+.container
+{
+width:100%;
+height:100%;
+}
+
+.col {
+float: left;
+width: 50%;
+height: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.col .text 
+{
+font-family: 'nav';
+display: flex;
+flex-direction: column;
+top: 50%;
+position: absolute;
+transform: translateY(-50%);
+padding: 60px;
+margin: 50px;
+line-height: 100px;
+}
+
+.text .title
+{
+font-size: 70px;
+}
+
+.text .sub-title
+{
+font-size: 30px;
+}
+
+.col .text,
+.text .title,
+.text .sub-title
+{
+color: white;
+background-color: rgb(80, 80, 80);
+opacity: 50%;
+}
+
+/*---------- office bearers ----------*/
+
+.row #title {
+font-size: 50px;
+font-family: 'nav';
+font-weight: bolder;
+color: var(--nav-color);
+text-align: center;
+margin: 50px;
+}
+
+.officebearerscol {
+display: flex;
+align-items: center;
+justify-content: space-around;
+text-align: center;
+margin: 50px;
+}
+
+.officebearersimg {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+padding: 50px;
+}
+
+.designation,
+.pos .name,
+.pos .contact {
+font-family: 'nav';
+}
+
+
+.pos {
+flex: 1;
+}
+
+.vertical-break {
+border: grey solid 0.5px;
+height: 500px;
+}
+
+.pos img {
+border-top: 100px;
+}
+
+hr {
+border: var(--nav-color) solid 3px;
+margin: 30px auto;
+width: 80%;
+}
+
+
